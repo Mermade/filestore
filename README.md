@@ -1,0 +1,2 @@
+# filestore
+Static file hosting
