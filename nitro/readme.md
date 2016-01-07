@@ -1,1 +1,1 @@
-Placeholder
+# Storage for Nitro related files
