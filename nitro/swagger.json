@@ -25,7 +25,7 @@
 		"description": "Nitro for developers",
 		"url": "https://developer.bbc.co.uk/nitro"
 	},
-	"host": "nitro.api.bbci.co.uk",
+	"host": "programmes.api.bbc.com",
 	"basePath": "/nitro/api",
 	"tags": [
 		{
@@ -54,7 +54,7 @@
 				"tags": [
 					"feeds"
 				],
-				"summary": "Start here for programmes metadata: Brands, Series, Episodes and Clips",
+				"summary": "Fetch metadata about Programmes (brands, series, episodes, clips). By applying different filter restrictions this feed can be used in many ways, for example to retrieve all series belonging to a brand, all the episodes and/or clips for a specific series, or any TLEO objects for a masterbrand. Other filters permit restricting to specific formats and/or genres, and you can request specific versions (for example Signed or Audio-Described). Parameters may be combined in any way suitable for your application.",
 				"operationId": "listProgrammes",
 				"parameters": [
 					{
@@ -91,7 +91,7 @@
 					{
 						"name": "mixin",
 						"in": "query",
-						"description": "Mixins:\n* mixin to return the alternate images for a programme\n* mixin to return ancestor programme titles\n* mixin to return programme availability information\n* mixin to return information about programmes that are currently available\n* mixin to return information about contributors to a programme\n* mixin to return original version duration in programme concept entities\n* mixin to return list of genre groupings\n* mixin to add image information for a programme\n* mixin to add embeddable information for a programme\n* mixin to return the programmes which appear before and after a programme (as determined by the sort applied in the request)\n* mixin to return information about related links to a programme\n* mixin to return information about programmes that are currently available\n",
+						"description": "Mixins:\n* mixin to return the alternate images for a programme\n* mixin to return ancestor programme titles\n* mixin to return programme availability information\n* mixin to return information about programmes that are currently available\n* mixin to return information about contributors to a programme\n* mixin to return original version duration in programme concept entities\n* mixin to return list of genre groupings\n* mixin to add image information for a programme\n* mixin to add embeddable information for a programme\n* mixin to return the programmes which appear before and after a programme (as determined by the sort applied in the request)\n* mixin to return information about related links to a programme\n",
 						"type": "array",
 						"collectionFormat": "multi",
 						"items": {
@@ -109,8 +109,7 @@
 							"images",
 							"is_embeddable",
 							"previous_next",
-							"related_links",
-							"versions_availability"
+							"related_links"
 						]
 					},
 					{
@@ -294,10 +293,10 @@
 						"in": "query",
 						"description": "filter for subset of programmes with title beginning with initial letter",
 						"type": "array",
-						"maxLength": 1,
 						"items": {
 							"type": "string",
-							"minLength": 1
+							"minLength": 1,
+							"maxLength": 1
 						},
 						"collectionFormat": "multi",
 						"required": false
@@ -623,7 +622,7 @@
 				"tags": [
 					"feeds"
 				],
-				"summary": "Build schedules and find metadata for TV and radio broadcasts",
+				"summary": "Fetch metadata about linear Broadcasts and Services, allowing the generation of Television and Radio schedules and other datasets for broadcast items.",
 				"operationId": "listBroadcasts",
 				"parameters": [
 					{
