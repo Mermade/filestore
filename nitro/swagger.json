@@ -50,11 +50,11 @@
 	"paths": {
 		"/programmes": {
 			"get": {
-				"description": "Start here for programmes metadata: Brands, Series, Episodes and Clips",
+				"description": "Fetch metadata about Programmes (brands, series, episodes, clips). By applying different filter restrictions this feed can be used in many ways, for example to retrieve all series belonging to a brand, all the episodes and/or clips for a specific series, or any TLEO objects for a masterbrand. Other filters permit restricting to specific formats and/or genres, and you can request specific versions (for example Signed or Audio-Described). Parameters may be combined in any way suitable for your application.",
 				"tags": [
 					"feeds"
 				],
-				"summary": "Fetch metadata about Programmes (brands, series, episodes, clips). By applying different filter restrictions this feed can be used in many ways, for example to retrieve all series belonging to a brand, all the episodes and/or clips for a specific series, or any TLEO objects for a masterbrand. Other filters permit restricting to specific formats and/or genres, and you can request specific versions (for example Signed or Audio-Described). Parameters may be combined in any way suitable for your application.",
+				"summary": "Start here for programmes metadata: Brands, Series, Episodes and Clips",
 				"operationId": "listProgrammes",
 				"parameters": [
 					{
@@ -618,11 +618,11 @@
 		},
 		"/broadcasts": {
 			"get": {
-				"description": "Build schedules and find metadata for TV and radio broadcasts",
+				"description": "Fetch metadata about linear Broadcasts and Services, allowing the generation of Television and Radio schedules and other datasets for broadcast items.",
 				"tags": [
 					"feeds"
 				],
-				"summary": "Fetch metadata about linear Broadcasts and Services, allowing the generation of Television and Radio schedules and other datasets for broadcast items.",
+				"summary": "Build schedules and find metadata for TV and radio broadcasts",
 				"operationId": "listBroadcasts",
 				"parameters": [
 					{
